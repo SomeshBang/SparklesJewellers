@@ -1,0 +1,625 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,100;1,200;1,300;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,400;0,500;0,600;0,700;1,100;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;1,9..40,200;1,9..40,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* -------------------------------------------- */
+
+
+
+/* ReStyling Element */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+div{
+  /* border: 1px solid blue; */
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+h1{
+  font-size: 2.5rem;
+  font-weight: 700;
+
+}
+
+h2{
+  font-size: 1.8rem;
+  font-weight: 600;
+
+}
+
+h3{
+  font-size: 1.4rem;
+  font-weight: 800;
+
+}
+
+h4{
+  font-size: 1.1rem;
+  font-weight: 600;
+
+}
+
+h5{
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(43, 43, 43);
+
+}
+
+h6{
+  color: rgb(199, 199, 199);
+
+}
+/* -------------------------------------------- */
+
+/* Scroll bar effect */
+::-webkit-scrollbar{
+  width: 0.2125rem;
+}
+
+::-webkit-scrollbar-track{
+  background: rgb(71, 71, 71);
+}
+
+::-webkit-scrollbar-thumb{
+  background: rgb(139, 255, 245);
+}
+
+/* -------------------------------------------- */
+
+/* Small Navbar */
+.topHeader{
+  background-color: rgb(191, 191, 191);
+  letter-spacing: 0.10rem;
+    font-size: 0.9rem;
+}
+
+/* -------------------------------------------- */
+
+
+/* Navbar */
+#companyTitle{
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.5rem;
+  padding: 10px;
+  font-weight: 600;
+}
+
+#companyTitle::first-letter{
+  color: rgb(131 84 200);
+  
+}
+
+#companyTitle:hover{
+  color: rgb(131 84 200);
+  
+}
+
+.navbarFnt{
+  font-size: 16px;
+
+}
+
+#navbarEffect{
+  padding: 0 20px;
+  color: rgb(0, 0, 0);
+  transition: 0.3 ease;
+  font-family: 'DM Sans', Courier, monospace;
+  font-weight: 800;
+}
+
+.navbarFnt i{
+  font-size: 1.2rem;
+  padding: 0px 5px;
+  cursor: pointer;
+  /* font-weight: 500; */
+  transition: 0.3s ease;
+}
+
+#navbarEffect:hover,
+#navbarEffect:active
+{
+  color: rgb(131 84 200);
+  text-decoration: underline;
+}
+
+.navbarFnt i:hover,
+.navbarFnt i:active{
+  color: rgb(131 84 200);
+}
+/* -------------------------------------------- */
+
+/* Sliding images BODY */
+.carousel-item {
+  height: 700px;
+  overflow: hidden;
+}
+
+
+/* #ioio{
+  filter: blur(2px);
+} */
+
+
+.carousel-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+#body .carousel-caption{
+  top: 15rem;
+  color: rgb(255, 255, 255);
+  
+}
+
+#body .carousel-caption h1{
+  font-size: 4rem;
+  font-family: 'Satisfy', cursive;
+  text-shadow: -5px 4px 3px rgb(0 0 0);
+}
+
+#body .carousel-caption p{
+  max-width: 36.25rem;
+    margin: 1.062rem auto;
+    font-family: 'DM Sans', Courier, monospace;
+    font-weight: bolder;
+    text-shadow: -2px 1px 2px rgb(0 0 0);
+    color: #ffffff;
+    letter-spacing: 0.122rem;
+}
+
+.mainBtn{
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.125rem;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 30px;
+  position: relative;
+  text-shadow: 0px 7px 11px black;
+  text-decoration: none;
+  font-family: 'EB Garamond', serif;
+
+}
+
+.mainBtn::after,
+.mainBtn::before{
+  position: absolute;
+  top: 50%;
+  background-color: rgb(255, 255, 255);
+  left: 0;
+  width: 100%;
+  height: 1px;
+  /* content: ""; */
+  transform: all .5s ease-out 0s;
+  -webkit-transition: all .5s ease-out 0s;
+  /* transform: translateY(-20px);
+  -webkit-transform: translateY(-20px); */
+
+}
+
+/* .mainBtn::after{
+  transform: translateY(20px);
+  -webkit-transform: translateY(20px);
+} */
+
+.mainBtn:hover::before{
+  /* transform: rotate(20deg);
+  -webkit-transform: rotate(20deg); */
+  background-color: rgb(136, 249, 255);
+}
+
+.mainBtn:hover::after{
+  /* transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg); */
+  background-color: rgb(136, 249, 255);
+  
+}
+
+.mainBtn:hover{
+  color: rgb(136, 249, 255) !important;
+  cursor: url('../img/c.png'),auto !important;
+}
+
+/* -------------------------------------------------- */
+
+
+
+
+
+.SecondSpecialCase{
+  display:none;
+}
+
+#animatedSquare{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.promotionHeight{
+  height: 650px;
+}
+
+.productBanner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productBannerSec{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.borderDesign{
+  width: 300px;
+  height: 430px;
+  border: 2px solid red;
+  position: relative;
+}
+
+#borderDesignSec{
+  margin-left: 3rem;
+}
+
+.productBanner img{
+  width: 300px;
+  height: 430px;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  transition: transform 1s;
+  box-shadow: -5px 5px 7px 0px black;
+}
+
+.productBannerSec img{
+  width: 300px;
+  height: 430px;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  transition: transform 1s;
+  box-shadow: 5px 5px 7px 0px black;
+}
+
+
+.productBanner img:hover {
+  transform: translate(15px, -15px);
+}
+
+.productBannerSec img:hover {
+  transform: translate(-15px, -15px);
+}
+
+.productName{
+  padding-top: 11rem;
+  padding-right: 6rem;
+
+}
+
+#productNameSec{
+  padding-left: 6rem;
+  padding-right: 0px;
+}
+
+.productTitle{
+  font-size: 3.5rem;
+  font-family: 'Pacifico', cursive;
+  font-weight: 500;
+  color: red;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.productName p{
+  font-size: 1.5rem;
+  font-family: 'EB Garamond', serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  letter-spacing: 0px;
+  line-height: 2rem;
+}
+/* -------------------------------------------------- */
+
+
+
+
+
+/* Exclusive Category */
+
+.categoryItems{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-top: 5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.categoryTitle{
+  font-size: 3.5rem;
+  font-family: 'Pacifico', cursive;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+
+}
+
+.categoryImages img{
+  width: 100%;
+  height: 25rem;
+  opacity: 1;
+  display: block;
+  /* width: 100%; */
+  /* height: auto; */
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-radius: 10px
+}
+
+.categoryImages {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px
+}
+
+.categoryImages img {
+    transition: transform 1s ease;
+    border-radius: 10px
+}
+
+.categoryImages:hover img {
+    transform: scale(1.1);
+    opacity: 0.6;
+    border-radius: 10px
+}
+
+.overlay-text {
+  font-family: 'Satisfy', cursive;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255 255 255);
+  padding: 10px;
+  /* opacity: 0; */
+  transition: opacity 0.3s ease-in-out;
+  font-weight: 600;
+  text-shadow: -3px 3px 4px black;
+  text-align: center;
+}
+
+/* .categoryImageLink:hover .overlay-text {
+  opacity: 1;
+} */
+
+.categoryImageLink .overlay-text {
+  opacity: 1; /* Show the text on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------- */
+
+/* Footer Styling */
+.footerStyling{
+  background-color: rgb(169, 170, 170);
+}
+
+/* -------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* MOBILE Phones */
+@media screen and (max-width: 575px){
+  #logo{
+    width: 50px;
+  }
+
+  #companyTitle{
+    padding: 0px;
+    margin-left: 5px;
+    margin-right: 0px;
+  }
+
+  #navbarItems{
+    text-align: center;
+    line-height: 2.5rem;
+  }
+
+  .nav-item:hover{
+    background: rgb(206, 204, 204);
+  }
+
+  #body .carousel-caption{
+    top: 12rem;
+  }
+
+  #animatedSquare{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+  }
+
+  .borderDesign {
+    width: 250px;
+    height: 330px;
+  }
+
+  .productBanner img {
+    width: 250px;
+    height: 330px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    transition: transform 1s;
+    box-shadow: -3px 3px 7px 0px black;
+  }
+
+  .productName{
+    padding: 1rem
+  }
+
+  .productTitle {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .productName p {
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 0px;
+    line-height: 1.5rem;
+  }
+
+  .FirstSpecialCase{
+    display: none;
+  }
+
+  .SecondSpecialCase{
+    display: initial;
+  }
+
+  .productBanner img:hover {
+    transform: translate(10px, -10px);
+  }
+
+  .promotionHeight{
+    height: 750px;
+  }
+
+  .categoryItems{
+    padding-top: 3rem;
+  }
+  
+  .categoryTitle {
+    font-size: 1.7rem;
+  }
+
+  .categoryImages img{
+    height: 20rem;
+  }
+
+  .overlay-text{
+    top: 40%;
+  }
+
+
+
+
+}
+
+
+
+
+
+
+/* IPADS */
+@media screen and (max-width: 900px) and (min-width: 575px){
+  #navbarItems{
+    text-align: center;
+    line-height: 2.5rem;
+  }
+
+  #animatedSquare{
+    height: 70vh;
+  }
+
+  .productTitle {
+    font-size: 3rem;
+  }
+
+  .categoryImages img{
+    height: 13rem;
+  }
+  
+}
+
+
+
+
+
+
+/* MINI Phones */
+@media screen and (max-width: 300px){
+  #logo{
+    width: 30px;
+  }
+
+  #companyTitle{
+    padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 1.2rem;
+  }
+
+  #navbarItems{
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+
+
+
