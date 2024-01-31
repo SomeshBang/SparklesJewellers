@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
 /* -------------------------------------------- */
 
 
@@ -14,6 +15,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* background-color: black;
+  color: wheat !important; */
   /* border: 1px solid red; */
 }
 
@@ -28,6 +31,7 @@ html{
 body{
   font-family: 'Poppins', sans-serif;
 }
+
 
 h1{
   font-size: 2.5rem;
@@ -85,13 +89,78 @@ h6{
 .topHeader{
   background-color: rgb(191, 191, 191);
   letter-spacing: 0.10rem;
-    font-size: 0.9rem;
+  font-size: 0.9rem;
+}
+
+.topHeader a{
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  padding-left: 5px;
+}
+
+.smallNavDesign a{
+  padding-left: 5px;
+  padding-right: 5px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.goldRateDisplay{
+  position: relative;
+  display: inline-block;
+}
+
+.goldRateInfo{
+  display: none;
+  position: absolute;
+  right: 0px;
+  background-color: #ffffff;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.292);
+  z-index: 10;
+}
+
+
+.goldRateInfo h4{
+  color: black;
+  padding: 5px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+}
+
+
+.goldRateDisplay:hover .goldRateInfo{
+  display: block;
+}
+
+
+.listNavbarItems{
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.listNavbarItems li{
+  padding-right: 10px;
+}
+
+#smallNavbar{
+  height: 1.5rem;
 }
 
 /* -------------------------------------------- */
 
 
 /* Navbar */
+
+.bigContainer{
+  width: 100%;
+}
+
 #companyTitle{
   font-family: 'Work Sans', sans-serif;
   font-size: 1.5rem;
@@ -99,14 +168,40 @@ h6{
   font-weight: 600;
 }
 
-#companyTitle::first-letter{
-  color: rgb(131 84 200);
-  
+#mainNavbarDesign{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  z-index: 5;
+}
+
+#mainNavbarDesign1{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  top: 0;
+}
+
+
+#navCollapseBtn{
+  border: none; 
+  box-shadow: none; 
+  outline: unset;
+}
+
+.navbar-nav {
+  align-items: center;
 }
 
 #companyTitle:hover{
-  color: rgb(131 84 200);
-  
+  color: rgb(131 84 200);  
+}
+
+.firstNavItemName{
+  display: none;
 }
 
 .navbarFnt{
@@ -114,8 +209,12 @@ h6{
 
 }
 
+.searchBarSecond{
+  display: none;
+}
+
 #navbarEffect{
-  padding: 0 20px;
+  padding: 0 10px;
   color: rgb(0, 0, 0);
   transition: 0.3 ease;
   font-family: 'DM Sans', Courier, monospace;
@@ -138,10 +237,219 @@ h6{
 }
 
 .navbarFnt i:hover,
-.navbarFnt i:active{
+.navbarFnt i:active,
+.navbarMenu a:hover,
+.navbarMenu a:active{
   color: rgb(131 84 200);
 }
+
+
+.hideForDesktop{
+  display: none;
+}
+
+.navMenu{
+  justify-content: space-around !important;
+  padding-top: 1.2rem;
+  font-size: 1.1rem;
+  flex-wrap: wrap;
+  text-wrap: nowrap;
+  display: block !important;
+}
+
+.navMenu .navbarMenu a{
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}
+
+.firstContainerDesign{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
 /* -------------------------------------------- */
+
+/* Navbar menu on hover */
+
+.hoverMenu{
+  position: relative;
+  display: inline-block;
+}
+
+.hoverMenu::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(131, 84, 200);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hoverMenu:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbarMenu{
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-around;
+  width: 100%;
+}
+
+.menu-item {
+  color: #000000;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.sub-menu {
+  display: none;
+  position: relative;
+  /* top: 11.5rem; */
+  /* Adjusted to leave space for the menu items */
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background-color: #f2f2f2;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  overflow-y: auto;
+  padding-top: 10px;
+  border-radius: 10px;
+  /* Added padding */
+}
+
+.sub-menu-category {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.sub-menu-category:hover {
+  background-color: #ddd;
+}
+
+.allJewelHoverMenu{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* padding-top: 5rem; */
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+#allJewelRowId .col-md-2{
+  padding-right: 4px;
+  padding-left: 4px; 
+}
+
+.allJewelImages{
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.allJewelImages img{
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  transition: transform 1s ease;
+  border-radius: 10px;
+}
+
+.allJewelImages:hover img{
+  transform: scale(1.1) rotate(10deg);
+  opacity: 0.5;
+  border-radius: 10px
+}
+
+.allJewelOverlayText{
+  font-family: 'Satisfy', cursive;
+  font-size: 1rem;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  /* padding: 10px; */
+  /* opacity: 0; */
+  transition: opacity 0.3s ease-in-out;
+  font-weight: 600;
+  /* text-shadow: -3px 3px 4px black; */
+  text-align: center;
+}
+#allJewelMoreProducts{
+  background: rgb(131, 84, 200);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  margin: 50px 59px 18px;
+  padding: 15px;
+}
+
+.allJewelMobileTitle{
+  position: relative;
+  width: 100%;
+}
+
+.allJewelDropdown {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.allJewelMobileData {
+  display: none;
+  position: relative;
+  width: 100%;
+  overflow: auto;
+  /* box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4); */
+}
+
+.allJewelDropdown.active .allJewelMobileData {
+  display: block;
+}
+
+.dropdownBtnJewele{
+  border: none;
+  width: 100%;
+  font-family: 'DM Sans', Courier, monospace;
+  font-weight: 800;
+  background-color: rgb(255, 255, 255);
+}
+
+.dropdownBtnJewele:hover{
+  background-color: rgb(201, 201, 201);
+  color: rgb(131 84 200);
+  /* text-decoration: underline; */
+}
+
+#navbarItems{
+  background-color: #ffffff;
+}
+
+
+
+
+
+
+
+/* -------------------------------------------- */
+
 
 /* Sliding images BODY */
 .carousel-item {
@@ -376,6 +684,8 @@ h6{
   /* height: auto; */
   transition: .5s ease;
   backface-visibility: hidden;
+  border-radius: 10px;
+  transition: transform 1s ease;
   border-radius: 10px
 }
 
@@ -386,11 +696,7 @@ h6{
     border-radius: 10px
 }
 
-.categoryImages img {
-    transition: transform 1s ease;
-    border-radius: 10px
-}
-
+ 
 .categoryImages:hover img {
     transform: scale(1.1);
     opacity: 0.6;
@@ -465,8 +771,120 @@ h6{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* IPADS */
+@media screen and (max-width: 990px) and (min-width: 575px){
+  #navbarItems{
+    text-align: center;
+    line-height: 2.5rem;
+  }
+
+  .navMenu{
+    font-size: 1rem;
+  }
+
+  .navbarMenu{
+    justify-content: space-between;
+  }
+
+  .searchBarFirst{
+    display: none;
+  }
+  
+  .searchBarSecond,
+  .firstNavItemName{
+    display: initial;
+  }
+
+  #animatedSquare{
+    height: 70vh;
+  }
+
+  .productTitle {
+    font-size: 3rem;
+  }
+
+  .categoryImages img{
+    height: 13rem;
+  }
+
+  .overlay-text{
+    top: 30%;
+    font-size: 2.3rem;
+  }
+  
+}
+
+
+
+
+
 /* MOBILE Phones */
 @media screen and (max-width: 575px){
+  #smallNavbar, .stopSeeing{
+    display: none !important;
+  }
+
   #logo{
     width: 50px;
   }
@@ -482,9 +900,54 @@ h6{
     line-height: 2.5rem;
   }
 
+  .navMenu{
+    display: none !important;
+  }
+
+  .nav-item{
+    width: 100%;
+  }
+
   .nav-item:hover{
     background: rgb(206, 204, 204);
   }
+
+  .searchBarFirst{
+    display: none;
+  }
+  
+  .searchBarSecond,
+  .firstNavItemName{
+    display: initial;
+  }
+
+  .hideForDesktop{
+    display: initial;
+  }
+
+  .allJewelMobileTitle{
+    display: inline-block;
+  }
+
+  .navbarFnt i {
+    font-size: 0.9rem;
+  }
+
+  .allJewelImages img {
+    height: auto;
+  }
+
+  .allJewelHoverMenu{
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  #navbarEffect:hover,
+  #navbarEffect:active
+  {
+  color: rgb(131 84 200);
+  text-decoration: none;
+  }  
 
   #body .carousel-caption{
     top: 12rem;
@@ -573,37 +1036,27 @@ h6{
 
 
 
-
-/* IPADS */
-@media screen and (max-width: 900px) and (min-width: 575px){
-  #navbarItems{
-    text-align: center;
-    line-height: 2.5rem;
-  }
-
-  #animatedSquare{
-    height: 70vh;
-  }
-
-  .productTitle {
-    font-size: 3rem;
-  }
-
-  .categoryImages img{
-    height: 13rem;
-  }
-  
-}
-
-
-
-
-
-
 /* MINI Phones */
 @media screen and (max-width: 300px){
+  #smallNavbar, .stopSeeing{
+    display: none !important;
+  }
+
   #logo{
     width: 30px;
+  }
+
+  .searchBarFirst, .stopSeeing{
+    display: none;
+  }
+  
+  .searchBarSecond,
+  .firstNavItemName{
+    display: initial;
+  }
+  
+  .hideForDesktop{
+    display: initial;
   }
 
   #companyTitle{
@@ -618,7 +1071,85 @@ h6{
     line-height: 1.5rem;
     font-size: 0.75rem;
   }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

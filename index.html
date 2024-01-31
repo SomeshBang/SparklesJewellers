@@ -17,60 +17,410 @@
 </head>
 
 <body>
-  <section>
-    <header>
 
-      <!-- First small Navbar -->
-      <div class="topHeader">
-        <div class="container d-flex justify-content-between align-item-center">
-          <span>Hello text 1 </span>
-          <span>Hello text 2 </span>
+  <!-- Navbars -->
+  <section id="NavBar">
+    <header>
+      <!-- Small Navbar -->
+      <div class="topHeader d-flex justify-content-between align-item-center" id="smallNavbar">
+        <div>
+          <ul class="listNavbarItems">
+            <li>
+              <a href="" title="Reach Us">Contact Us</a>
+            </li>
+            <li>
+              <a href="" title="Reach Us">About Us</a>
+            </li>
+            <li>
+              <a href="" title="Reach Us">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="smallNavDesign">
+          <a href="">Login / SignUp</a>
+          <div class="goldRateDisplay">
+            <a title="Live gold Rate Display">Gold Rate<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            <div class="goldRateInfo">
+              <h4>
+                Gold rate will be displayed
+              </h4>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- --------------------------------------------------------- -->
+      <!-- /Small navbar/ -->
+
 
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary py-3 navbarFnt">
-        <div class="container">
-          <img id="logo" src="./img/diamond.png" alt="Logo" width="70px" />
-          <a class="navbar-brand " id="companyTitle" href="#">Sparkles Jeweles</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation" style="border: none;
-            box-shadow: none;
-            outline: unset;">
-            <!-- <span class="navbar-toggler-icon"></span> -->
-            <i class="fas fa-stream"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary py-3 navbarFnt" id="mainNavbarDesign">
+        <div class="container firstContainerDesign">
+          <div class="companyNameNLogo">
+            <img id="logo" src="./img/diamond.png" alt="Logo" width="70px" />
+            <a class="navbar-brand " id="companyTitle" href="#">Sparkles Jewel's</a>
+          </div>
+          <div>
+            <button class="navbar-toggler" id="navCollapseBtn" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="fas fa-stream"></i>
+            </button>
+          </div>
+
+          <!-- Inside toggle Button -->
+          <div class="collapse navbar-collapse mt-3" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto" id="navbarItems">
-              <li class="nav-item">
-                <a class="nav-link" id="navbarEffect" href="#">Home</a>
+              <div class="allJewelMobileTitle hideForDesktop">
+                <div class="allJewelDropdown" onclick="toggleDropdown()">
+                  <button class="dropdownBtnJewele">All Jewelry<i class="fa fa-angle-down"
+                      aria-hidden="true"></i></button>
+                  <div class="allJewelMobileData">
+                    <div class="allJewelHoverMenu">
+                      <div class="row" id="allJewelRowId">
+                        <div class="col-md-2">
+                          <div class="thumbnail allJewelImages">
+                            <a href="#" class="allJewelImageLink">
+                              <img src="./img/Earrings.webp" alt="Earring">
+                              <div class="allJewelOverlayText">Earring</div>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="col-md-2">
+                          <div class="thumbnail allJewelImages">
+                            <a href="#" class="allJewelImageLink">
+                              <img src="./img/Bangles.webp" alt="Bangles">
+                              <div class="allJewelOverlayText">Bangles</div>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="col-md-2">
+                          <div class="thumbnail allJewelImages">
+                            <a href="#" class="allJewelImageLink">
+                              <img src="./img/Rings.webp" alt="Rings">
+                              <div class="allJewelOverlayText">Rings</div>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="col-md-2">
+                          <div class="thumbnail allJewelImages">
+                            <a href="#" class="allJewelImageLink">
+                              <img src="./img/Bracelet.webp" alt="Bracelet">
+                              <div class="allJewelOverlayText">Bracelet</div>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="col-md-2">
+                          <div class="thumbnail allJewelImages">
+                            <a href="#" class="allJewelImageLink">
+                              <img src="./img/Chain.webp" alt="Chain">
+                              <div class="allJewelOverlayText">Chain</div>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="col-md-2">
+                          <div class="thumbnail allJewelImages">
+                            <a href="#" class="allJewelImageLink">
+                              <img src="./img/Coins.webp" alt="Coins">
+                              <div class="allJewelOverlayText">Coins</div>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="col-md-2">
+                          <div class="thumbnail allJewelImages">
+                            <a href="#" class="allJewelImageLink">
+                              <img src="./img/Necklace.webp" alt="Necklace">
+                              <div class="allJewelOverlayText">Necklace</div>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="col-md-2">
+                          <div class="thumbnail allJewelImages">
+                            <a href="#" class="allJewelImageLink">
+                              <img src="./img/Nose-pin.webp" alt="Nose-pin">
+                              <div class="allJewelOverlayText">Nose Pin</div>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="col-md-2">
+                          <div class="thumbnail allJewelImages">
+                            <a href="#" class="allJewelImageLink">
+                              <img src="./img/Pendant.webp" alt="Pendant">
+                              <div class="allJewelOverlayText">Pendant</div>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="col-md-2">
+                          <div class="thumbnail allJewelImages">
+                            <a href="#" class="allJewelImageLink">
+                              <img src="./img/Mangalsutra.webp" alt="Mangalsutra">
+                              <div class="allJewelOverlayText">Mangalsutra</div>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="col-md-2">
+                          <div class="thumbnail allJewelImages">
+                            <a href="#" class="allJewelImageLink">
+                              <img src="./img/Silver.webp" alt="Silver">
+                              <div class="allJewelOverlayText">Silver</div>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="col-md-2">
+                          <div class="thumbnail allJewelImages">
+                            <a href="#" class="allJewelImageLink">
+                              <img id="allJewelMoreProducts" src="./img/arrow-right-white.webp" alt="All Products">
+                              <div class="allJewelOverlayText">All Products</div>
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="allJewelMobileTitle hideForDesktop">
+                <div class="dropdown1">
+                  <button class="dropdownBtnJewele">Diamonds<i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                  <div class="allJewelMobileData">
+                    <a>Blog</a>
+                    <a>Academy</a>
+                    <a>YouTube</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="allJewelMobileTitle hideForDesktop">
+                <div class="dropdown1">
+                  <button class="dropdownBtnJewele">Gemstone's<i class="fa fa-angle-down"
+                      aria-hidden="true"></i></button>
+                  <div class="allJewelMobileData">
+                    <a>Blog</a>
+                    <a>Academy</a>
+                    <a>YouTube</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="allJewelMobileTitle hideForDesktop">
+                <div class="dropdown1">
+                  <button class="dropdownBtnJewele">Personalization<i class="fa fa-angle-down"
+                      aria-hidden="true"></i></button>
+                  <div class="allJewelMobileData">
+                    <a>Blog</a>
+                    <a>Academy</a>
+                    <a>YouTube</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="allJewelMobileTitle hideForDesktop">
+                <div class="dropdown1">
+                  <button class="dropdownBtnJewele">Specials<i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                  <div class="allJewelMobileData">
+                    <a>Blog</a>
+                    <a>Academy</a>
+                    <a>YouTube</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Other Options  -->
+              <li class="nav-item hideForDesktop" title="Favorite">
+                <a class="nav-link" id="navbarEffect" href="#">Login / Register</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="navbarEffect" href="#">Shop</a>
+              <li class="nav-item" title="Wishlist">
+                <a class="nav-link" id="navbarEffect" href="#"><i class="fa-regular fa-heart stopSeeing"></i><span
+                    class="firstNavItemName">Wishlist</span></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="navbarEffect" href="#">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="navbarEffect" href="#">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="navbarEffect" href="#">Register</a>
-              </li>
-              <li class="nav-item">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </li>
-              <li class="nav-item">
-                <i class="fa-solid fa-cart-shopping"></i>
+              <li class="nav-item" title="Cart">
+                <a class="nav-link" id="navbarEffect" href="#"><i class="fa-solid fa-cart-shopping stopSeeing"></i><span
+                    class="firstNavItemName">Cart</span></a>
               </li>
             </ul>
           </div>
         </div>
+
+        <!-- Outside Toggle Button -->
+        <div class="container navMenu">
+          <nav class="navbarMenu">
+            <a href="/" class="menu-item hoverMenu" onmouseover="showSubMenu('menuAllJewelry')"
+              onmouseout="hideSubMenu('menuAllJewelry')">All Jewelry</a>
+            <a href="/" class="menu-item hoverMenu" onmouseover="showSubMenu('menuDiamonds')"
+              onmouseout="hideSubMenu('menuDiamonds')">Diamonds</a>
+            <a href="/" class="menu-item hoverMenu" onmouseover="showSubMenu('menuGemstones')"
+              onmouseout="hideSubMenu('menuGemstones')">Gemstone's</a>
+            <a href="/" class="menu-item hoverMenu" onmouseover="showSubMenu('menuPersonalization')"
+              onmouseout="hideSubMenu('menuPersonalization')">Personalization</a>
+            <a href="/" class="menu-item hoverMenu" onmouseover="showSubMenu('menuSpecials')"
+              onmouseout="hideSubMenu('menuSpecials')">Specials</a>
+          </nav>
+
+          <div class="sub-menu" id="menuAllJewelry-submenu" onmouseover="cancelHideSubMenu('menuAllJewelry')"
+            onmouseout="hideSubMenu('menuAllJewelry')">
+
+
+            <div class="allJewelHoverMenu">
+              <div class="row" id="allJewelRowId">
+                <div class="col-md-2">
+                  <div class="thumbnail allJewelImages">
+                    <a href="#" class="allJewelImageLink">
+                      <img src="./img/Earrings.webp" alt="Earring">
+                      <div class="allJewelOverlayText">Earring</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="thumbnail allJewelImages">
+                    <a href="#" class="allJewelImageLink">
+                      <img src="./img/Bangles.webp" alt="Bangles">
+                      <div class="allJewelOverlayText">Bangles</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="thumbnail allJewelImages">
+                    <a href="#" class="allJewelImageLink">
+                      <img src="./img/Rings.webp" alt="Rings">
+                      <div class="allJewelOverlayText">Rings</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="thumbnail allJewelImages">
+                    <a href="#" class="allJewelImageLink">
+                      <img src="./img/Bracelet.webp" alt="Bracelet">
+                      <div class="allJewelOverlayText">Bracelet</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="thumbnail allJewelImages">
+                    <a href="#" class="allJewelImageLink">
+                      <img src="./img/Chain.webp" alt="Chain">
+                      <div class="allJewelOverlayText">Chain</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="thumbnail allJewelImages">
+                    <a href="#" class="allJewelImageLink">
+                      <img src="./img/Coins.webp" alt="Coins">
+                      <div class="allJewelOverlayText">Coins</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="thumbnail allJewelImages">
+                    <a href="#" class="allJewelImageLink">
+                      <img src="./img/Necklace.webp" alt="Necklace">
+                      <div class="allJewelOverlayText">Necklace</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="thumbnail allJewelImages">
+                    <a href="#" class="allJewelImageLink">
+                      <img src="./img/Nose-pin.webp" alt="Nose-pin">
+                      <div class="allJewelOverlayText">Nose Pin</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="thumbnail allJewelImages">
+                    <a href="#" class="allJewelImageLink">
+                      <img src="./img/Pendant.webp" alt="Pendant">
+                      <div class="allJewelOverlayText">Pendant</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="thumbnail allJewelImages">
+                    <a href="#" class="allJewelImageLink">
+                      <img src="./img/Mangalsutra.webp" alt="Mangalsutra">
+                      <div class="allJewelOverlayText">Mangalsutra</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="thumbnail allJewelImages">
+                    <a href="#" class="allJewelImageLink">
+                      <img src="./img/Silver.webp" alt="Silver">
+                      <div class="allJewelOverlayText">Silver</div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="thumbnail allJewelImages">
+                    <a href="#" class="allJewelImageLink">
+                      <img id="allJewelMoreProducts" src="./img/arrow-right-white.webp" alt="All Products">
+                      <div class="allJewelOverlayText">All Products</div>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="sub-menu" id="menuDiamonds-submenu" onmouseover="cancelHideSubMenu('menuDiamonds')"
+            onmouseout="hideSubMenu('menuDiamonds')">
+            <div class="sub-menu-category">Category 1</div>
+            <div class="sub-menu-category">Category 2</div>
+            <div class="sub-menu-category">Category 3</div>
+          </div>
+
+          <div class="sub-menu" id="menuGemstones-submenu" onmouseover="cancelHideSubMenu('menuGemstones')"
+            onmouseout="hideSubMenu('menuGemstones')">
+            <div class="sub-menu-category">Category 1</div>
+            <div class="sub-menu-category">Category 2</div>
+            <div class="sub-menu-category">Category 3</div>
+          </div>
+
+          <div class="sub-menu" id="menuPersonalization-submenu" onmouseover="cancelHideSubMenu('menuPersonalization')"
+            onmouseout="hideSubMenu('menuPersonalization')">
+            <div class="sub-menu-category">Category 1</div>
+            <div class="sub-menu-category">Category 2</div>
+            <div class="sub-menu-category">Category 3</div>
+          </div>
+
+          <div class="sub-menu" id="menuSpecials-submenu" onmouseover="cancelHideSubMenu('menuSpecials')"
+            onmouseout="hideSubMenu('menuSpecials')">
+            <div class="sub-menu-category">Category 1</div>
+            <div class="sub-menu-category">Category 2</div>
+            <div class="sub-menu-category">Category 3</div>
+          </div>
+        </div>
       </nav>
+      <!-- Navbar -->
+
     </header>
   </section>
+  <!-- ######################################################################### -->
 
 
 
@@ -163,6 +513,7 @@
       </button>
     </div>
   </section>
+  <!-- ######################################################################### -->
 
 
   <!-- Prdouct Promotion  -->
@@ -251,6 +602,7 @@
     </div>
 
   </section>
+  <!-- ######################################################################### -->
 
 
 
@@ -298,6 +650,7 @@
   </section> -->
 
 
+  <!-- Category -->
   <section>
     <div class="categoryItems ">
       <h1>
@@ -334,6 +687,8 @@
     </div>
 
   </section>
+  <!-- ######################################################################### -->
+
 
 
 
@@ -535,6 +890,7 @@
     crossorigin="anonymous"></script>
   <!-- Font Awsome -->
   <script src="https://kit.fontawesome.com/8e26b4230d.js" crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
