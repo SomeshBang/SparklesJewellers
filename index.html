@@ -4,17 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="stylesheet" href="./css/style.css" />
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css" integrity="sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <title>Sparkle Jewels</title>
 </head>
+
 
 <body>
 
@@ -176,7 +170,8 @@
                         </div>
 
                         <div class="col-md-2">
-                          <div class="thumbnail allJewelImages">
+                          <div class="thumbnail allJewelImages" style="margin: auto;
+                          width: 11.3rem !important;">
                             <a href="#" class="allJewelImageLink">
                               <img id="allJewelMoreProducts" src="./img/arrow-right-white.webp" alt="All Products">
                               <div class="allJewelOverlayText">All Products</div>
@@ -254,7 +249,7 @@
 
         <!-- Outside Toggle Button -->
         <div class="container navMenu">
-          <nav class="navbarMenu">
+          <nav class="navbarMenu desktopNavbarOnly">
             <a href="/" class="menu-item hoverMenu" onmouseover="showSubMenu('menuAllJewelry')"
               onmouseout="hideSubMenu('menuAllJewelry')">All Jewelry</a>
             <a href="/" class="menu-item hoverMenu" onmouseover="showSubMenu('menuDiamonds')"
@@ -267,13 +262,22 @@
               onmouseout="hideSubMenu('menuSpecials')">Specials</a>
           </nav>
 
+          <!-- This Code is for Ipads Menu but have some problem  -->
+          <!-- <nav class="navbarMenu ipadsNavbarOnly">
+            <a href="#" class="menu-item hoverMenu" onclick="toggleSubMenuForMobile('menuAllJewelry')">aAll Jewelry</a>
+            <a href="#" class="menu-item hoverMenu" onclick="toggleSubMenuForMobile('menuDiamonds')">Diamonds</a>
+            <a href="#" class="menu-item hoverMenu" onclick="toggleSubMenuForMobile('menuGemstones')">Gemstone's</a>
+            <a href="#" class="menu-item hoverMenu" onclick="toggleSubMenuForMobile('menuPersonalization')">Personalization</a>
+            <a href="#" class="menu-item hoverMenu" onclick="toggleSubMenuForMobile('menuSpecials')">Specials</a>
+          </nav> -->
+
           <div class="sub-menu" id="menuAllJewelry-submenu" onmouseover="cancelHideSubMenu('menuAllJewelry')"
             onmouseout="hideSubMenu('menuAllJewelry')">
 
 
             <div class="allJewelHoverMenu">
               <div class="row" id="allJewelRowId">
-                <div class="col-md-2">
+                <div class="col-md-2 col-lg-2 col-sm-6 col-md-4"> 
                   <div class="thumbnail allJewelImages">
                     <a href="#" class="allJewelImageLink">
                       <img src="./img/Earrings.webp" alt="Earring">
@@ -282,7 +286,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2 col-lg-2 col-sm-6 col-md-4">
                   <div class="thumbnail allJewelImages">
                     <a href="#" class="allJewelImageLink">
                       <img src="./img/Bangles.webp" alt="Bangles">
@@ -291,7 +295,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2 col-lg-2 col-sm-6 col-md-4">
                   <div class="thumbnail allJewelImages">
                     <a href="#" class="allJewelImageLink">
                       <img src="./img/Rings.webp" alt="Rings">
@@ -300,7 +304,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2 col-lg-2 col-sm-6 col-md-4">
                   <div class="thumbnail allJewelImages">
                     <a href="#" class="allJewelImageLink">
                       <img src="./img/Bracelet.webp" alt="Bracelet">
@@ -309,7 +313,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2 col-lg-2 col-sm-6 col-md-4">
                   <div class="thumbnail allJewelImages">
                     <a href="#" class="allJewelImageLink">
                       <img src="./img/Chain.webp" alt="Chain">
@@ -318,7 +322,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2 col-lg-2 col-sm-6 col-md-4">
                   <div class="thumbnail allJewelImages">
                     <a href="#" class="allJewelImageLink">
                       <img src="./img/Coins.webp" alt="Coins">
@@ -327,7 +331,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2 col-lg-2 col-sm-6 col-md-4">
                   <div class="thumbnail allJewelImages">
                     <a href="#" class="allJewelImageLink">
                       <img src="./img/Necklace.webp" alt="Necklace">
@@ -336,7 +340,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2 col-lg-2 col-sm-6 col-md-4">
                   <div class="thumbnail allJewelImages">
                     <a href="#" class="allJewelImageLink">
                       <img src="./img/Nose-pin.webp" alt="Nose-pin">
@@ -345,7 +349,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2 col-lg-2 col-sm-6 col-md-4">
                   <div class="thumbnail allJewelImages">
                     <a href="#" class="allJewelImageLink">
                       <img src="./img/Pendant.webp" alt="Pendant">
@@ -354,7 +358,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2 col-lg-2 col-sm-6 col-md-4">
                   <div class="thumbnail allJewelImages">
                     <a href="#" class="allJewelImageLink">
                       <img src="./img/Mangalsutra.webp" alt="Mangalsutra">
@@ -363,7 +367,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2 col-lg-2 col-sm-6 col-md-4">
                   <div class="thumbnail allJewelImages">
                     <a href="#" class="allJewelImageLink">
                       <img src="./img/Silver.webp" alt="Silver">
@@ -372,7 +376,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2 col-lg-2 col-sm-6 col-md-4">
                   <div class="thumbnail allJewelImages">
                     <a href="#" class="allJewelImageLink">
                       <img id="allJewelMoreProducts" src="./img/arrow-right-white.webp" alt="All Products">
@@ -422,10 +426,7 @@
   </section>
   <!-- ######################################################################### -->
 
-
-
-
-
+  
   <!-- Carousel (Sliding Images) -->
   <section id="body">
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -605,52 +606,7 @@
   <!-- ######################################################################### -->
 
 
-
-
-  <!-- <section class="category">
-
-
-    <div class="categoryItems container">
-      <h1>
-        <div class="text-center categoryTitle">Exclusive Item's</div>
-      </h1>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="thumbnail categoryImages">
-              <a href="#" target="_blank">
-                <img src="./img/earrings.jpg" alt="">
-                
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="thumbnail categoryImages">
-              <a href="#" target="_blank">
-                <img src="./img/necklace.jpg" alt="" >
-                
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="thumbnail categoryImages">
-              <a href="#" target="_blank">
-                <img src="./img/ring.jpg" alt="" >
-                <div class="overlay-text">Your Text Here</div>
-              </a>
-            </div>
-          </div>
-
-          
-        </div>
-      </div>
-    </div>
-
-  </section> -->
-
-
-  <!-- Category -->
+  <!--Exclusive Category -->
   <section>
     <div class="categoryItems ">
       <h1>
@@ -690,96 +646,8 @@
   <!-- ######################################################################### -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <br><br><br><br><br>
-
+  <!-- Footer -->
   <section>
     <footer class="text-center text-lg-start text-white footerStyling">
       <div class="container p-4 pb-0">
@@ -863,22 +731,7 @@
       </div>
     </footer>
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!-- ######################################################################### -->
 
 
 
@@ -891,6 +744,7 @@
   <!-- Font Awsome -->
   <script src="https://kit.fontawesome.com/8e26b4230d.js" crossorigin="anonymous"></script>
   <script src="./js/script.js"></script>
+  
 </body>
 
 </html>

@@ -57,9 +57,32 @@ function cancelHideSubMenu(menuId) {
 // ===========================================================================
 
 
-
+// It will shows Item in mobile version of navbar
 function toggleDropdown() {
   var dropdown = document.querySelector('.allJewelDropdown');
   console.log(dropdown)
   dropdown.classList.toggle('active');
 }
+// ===========================================================================
+
+// For Ipad
+
+// function toggleSubMenuForMobile(submenuId) {
+//   var submenu1 = document.getElementById(submenuId + '-submenu');
+//   if (submenu1.style.display === 'block') {
+//       hideSubMenuForMobile(submenuId);
+//   } else {
+//       showSubMenuForMobile(submenuId);
+//   }
+// }
+
+// function showSubMenuForMobile(submenuId) {
+//   var submenu1 = document.getElementById(submenuId + '-submenu');
+//   submenu1.style.display = 'block';
+// }
+
+// function hideSubMenuForMobile(submenuId) {
+//   var submenu1 = document.getElementById(submenuId + '-submenu');
+//   submenu1.style.display = 'none';
+// }
+// ===========================================================================
